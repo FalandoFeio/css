@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,800' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            background: white;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .main-nav li {
+            width: 100px;
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 21px;
+            font-weight: 600;
+            color: #00a9d9;
+        }
+
+        .main-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            flex: 1;
+        }
+
+        .main-header {
+            background: #B61E32;
+            padding: 10px;
+        }
+
+        .main-content {
+            background: #F7CE2B;
+            min-height: 40vh;
+            padding: 10px;
+        }
+
+        .main-footer {
+            background: #ABC999;
+            padding: 10px;
+            order: 1;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-nav {
+            /* 
+                Propriedade order -1 indica que o elemento tem que estar no 
+                topo da página e os valores positivos ordenam os outros
+            */
+            order: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header">Header</header>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main class="main-content">Content</main>
+    <footer class="main-footer">Footer</footer>
+</body>
+
+</html>
